@@ -2,7 +2,7 @@
 call plug#begin()
 
     " NERDTree
-    'preservim/nerdtree'
+    Plug 'preservim/nerdtree'
 
     " CoC (autocompletion)
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
