@@ -2,7 +2,7 @@
 call plug#begin()
 
     " NERDTree
-    Plug 'preservim/nerdtree'
+    'preservim/nerdtree'
 
     " CoC (autocompletion)
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -10,15 +10,20 @@ call plug#begin()
     " Flake8 (python linting)
     Plug 'nvie/vim-flake8'
 
-    " Colorscheme
+    " Install colorscheme
     Plug 'gosukiwi/vim-atom-dark'
+
+    " Install airline theme
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
 
 
-" Colorscheme
+" Theme/colorscheme
 colorscheme atom-dark-256
+let g:airline_theme='gruvbox'
 
 
 
