@@ -1,12 +1,12 @@
 # Vim Configuration
----
 
-### About
+
+## About
 
 My vim configuration
 
 
-### Installation
+## Installation
 
 To install copy this command to your terminal:
 ```
