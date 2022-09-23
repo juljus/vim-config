@@ -3,12 +3,13 @@
 
 ## About
 
-My vim configuration
+My vim configuration.
+
 
 
 ## Installation
 
-To install copy this command to your terminal:
+To install my vim configuration copy this command to your terminal:
 ```
 curl -O https://raw.githubusercontent.com/juljus/vim-config/main/install.sh; . ./install.sh
 ```
