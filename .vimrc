@@ -17,7 +17,7 @@ call plug#begin()
 
 
     " autocomplete
-    Plug 'neoclide/coc.nvim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 
     " supertab
