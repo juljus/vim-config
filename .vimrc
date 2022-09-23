@@ -1,84 +1,119 @@
-" Plugins
+" PLUGINS
+
 call plug#begin()
 
-    " NERDTree
+
+    " file tree
     Plug 'preservim/nerdtree'
 
-    " CoC (autocompletion)
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-    " Flake8 (python linting)
-    Plug 'nvie/vim-flake8'
+    " colorscheme
+    Plug 'morhetz/gruvbox'
 
-    " Install colorscheme
-    Plug 'gosukiwi/vim-atom-dark'
 
-    " Install airline theme
+    " theme
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+
+
+    " autocomplete
+    Plug 'neoclide/coc.nvim'
+
+
+    " supertab
+    Plug 'ervandew/supertab'
+
+
+    " python linting
+    Plug 'nvie/vim-flake8'
+
 
 call plug#end()
 
 
 
-" Theme/colorscheme
-colorscheme atom-dark-256
-let g:airline_theme='gruvbox'
+
+" THEME/COLORSCHEME
+
+    " theme
+    let g:airline_solarized_bg='dark'
+
+
+    " colorscheme
+    set background=dark
+    colorscheme gruvbox
 
 
 
-" Settings
 
-    " Syntax highlighting
+" SETTINGS
+
+    " syntax highlighting
     syntax on
 
-    " Tab/indentation
+
+    " tab/indentation
     set tabstop=4
     set softtabstop=4
     set shiftwidth=4
     set expandtab
     set smartindent
 
-    " Line numbers
+
+    " line numbers
     set nu
     set relativenumber
 
-    " File navigation
+
+    " splitscreens
+    set splitright
+    set splitbelow
+
+
+    " file navigation
     set scrolloff=8
 
-    " Search
+
+    " search
     set ignorecase
     set incsearch
 
-    " Swapfile
+
+    " swapfile
     set noswapfile
 
-    " Sidecolumns
-    set signcolumn=yes
+
+    " colorcolumn
     set colorcolumn=80
 
 
 
-" Key mappings
 
-    " Leader key
+" KEY MAPPINGS
+
+    " leader key
     let mapleader = " "
 
-    " Split navigation
+
+    " split navigation
     nnoremap <C-h> <C-w>h
     nnoremap <C-j> <C-w>j
     nnoremap <C-k> <C-w>k
     nnoremap <C-l> <C-w>l
 
-    " NERDTree
-    nnoremap <C-z> :NERDTreeToggle<CR>
 
+    " terminal
+    nnoremap <leader>to :vert term<CR>
 
-
-" Autocommands
 
     " NERDTree
-    autocmd VimEnter * NERDTree
+    nnoremap <leader>ft :NERDTreeToggle<CR>
 
-    " Flake8
+
+
+
+" AUTOCOMMANDS
+    
+    " flake8
     autocmd BufWritePost *.py call flake8#Flake8()
+
