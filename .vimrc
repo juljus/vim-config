@@ -8,7 +8,8 @@ call plug#begin()
 
 
     " colorscheme
-    Plug 'morhetz/gruvbox'
+    Plug 'tomasr/molokai'
+    Plug 'arcticicestudio/nord-vim'
 
 
     " theme
@@ -16,16 +17,17 @@ call plug#begin()
     Plug 'vim-airline/vim-airline-themes'
 
 
-    " autocomplete
+    " autocomplete engine
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+
+    " python autocomplete/linting
+    Plug 'pappasam/coc-jedi'
+    Plug 'nvie/vim-flake8'
 
 
     " supertab
     Plug 'ervandew/supertab'
-
-
-    " python linting
-    Plug 'nvie/vim-flake8'
 
 
 call plug#end()
@@ -40,8 +42,9 @@ call plug#end()
 
 
     " colorscheme
+    syntax enable
     set background=dark
-    colorscheme gruvbox
+    colorscheme nord
 
 
 
@@ -87,6 +90,10 @@ call plug#end()
     set colorcolumn=80
 
 
+    " signcolumn
+    set signcolumn=yes
+
+
 
 
 " KEY MAPPINGS
@@ -108,6 +115,13 @@ call plug#end()
 
     " NERDTree
     nnoremap <leader>ft :NERDTreeToggle<CR>
+
+
+    " brackets/quotes
+    inoremap ( ()<Esc>i
+    inoremap [ []<Esc>i
+    inoremap { {}<Esc>i
+    inoremap ' ''<Esc>i
 
 
 
