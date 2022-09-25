@@ -1,3 +1,4 @@
+rm install.sh
 cd ~
 rm -f .vimrc
 rm -rf .vim
@@ -6,4 +7,3 @@ mkdir -p .vim/autoload/
 cd .vim/autoload/
 curl -O https://raw.githubusercontent.com/juljus/vim-config/main/.vim/autoload/plug.vim
 cd ~
-rm install.sh
