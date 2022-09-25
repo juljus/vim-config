@@ -15,6 +15,7 @@ call plug#begin()
     " theme
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'powerline/fonts'
 
 
     " autocomplete engine
@@ -37,8 +38,8 @@ call plug#end()
 
 " THEME/COLORSCHEME
 
-    " theme
-    let g:airline_solarized_bg='dark'
+    " airline theme
+    let g:airline_theme='nord'
 
 
     " colorscheme
@@ -109,6 +110,10 @@ call plug#end()
     nnoremap <C-l> <C-w>l
 
 
+    " autocomplete
+    inoremap <Tab> <C-y>
+
+
     " terminal
     nnoremap <leader>to :vert term<CR>
 
@@ -122,6 +127,7 @@ call plug#end()
     inoremap [ []<Esc>i
     inoremap { {}<Esc>i
     inoremap ' ''<Esc>i
+    inoremap < <><Esc>i
 
 
 
