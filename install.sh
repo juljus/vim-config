@@ -4,10 +4,18 @@ echo "================================"
 echo "Installing vim configuration..."
 echo "================================"
 
-# Clean up old config
 cd ~
-rm -f .vimrc
-rm -rf .vim
+
+# Backup old config
+if [ -f .vimrc ]; then
+  echo "[!] Backing up old .vimrc to .vimrc.bak"
+  mv .vimrc .vimrc.bak
+fi
+
+if [ -d .vim ]; then
+  echo "[!] Backing up old .vim to .vim.bak"
+  mv .vim .vim.bak
+fi
 
 # Download main vimrc
 echo "[+] Downloading .vimrc..."
