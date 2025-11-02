@@ -214,6 +214,19 @@ let NERDTreeIgnore=['\.pyc$', '__pycache__', '\.git$', 'node_modules']
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 
 " ============================================================================
+" C COMPILATION
+" ============================================================================
+
+" Run compiled program
+nnoremap <leader>cr :!./%:r<CR>
+
+" Compile and run current C file
+nnoremap <leader>car :!gcc % -o %:r && ./%:r<CR>
+
+" Clean compiled program
+nnoremap <leader>cdel :!rm %:r<CR>
+
+" ============================================================================
 " AUTOCOMMANDS
 " ============================================================================
 
