@@ -128,7 +128,6 @@ nnoremap <leader>hs :noh<CR>
 
 " --- Formatting ---
 nnoremap <leader>fw :%s/\s\+$//e<CR>           " Remove trailing whitespace
-nnoremap <leader>f= gg=G                        " Auto-format entire file
 
 " --- Git Integration ---
 nnoremap <leader>gs :Git<CR>
@@ -187,8 +186,9 @@ endfunction
 nmap <leader>rn <Plug>(coc-rename)
 
 " --- Format selected code ---
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+xmap <leader>fs  <Plug>(coc-format-selected)
+nmap <leader>fs  <Plug>(coc-format-selected)
+nnoremap <leader>fa :call CocAction('format')<CR>   " Format entire file
 
 " --- Show diagnostics ---
 nnoremap <leader>cd :<C-u>CocList diagnostics<CR>
