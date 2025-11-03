@@ -103,10 +103,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " --- File Navigation ---
-nnoremap <leader>ft :NERDTreeToggle<CR>
-nnoremap <leader>ff :Files<CR>
-nnoremap <leader>fb :Buffers<CR>
-nnoremap <leader>fl :Lines<CR>
+nnoremap <leader>ft :w<CR>:NERDTreeToggle<CR>
+nnoremap <leader>ff :w<CR>:Files<CR>
+nnoremap <leader>fb :w<CR>:Buffers<CR>
+nnoremap <leader>fl :w<CR>:Lines<CR>
 
 " --- Terminal ---
 nnoremap <leader>to :vert term<CR><C-\><C-n>:vertical resize 50<CR>i
@@ -218,13 +218,10 @@ let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 " ============================================================================
 
 " Run compiled program
-nnoremap <leader>cr :!./%:r<CR>
+nnoremap <leader>cr :!./%:h/build/%:t:r<CR>
 
 " Compile and run current C file
-nnoremap <leader>car :!gcc % -o %:r && ./%:r<CR>
-
-" Clean compiled program
-nnoremap <leader>cdel :!rm %:r<CR>
+nnoremap <leader>car :w<CR>:!mkdir -p %:h/build && gcc -Wall -Werror -Werror=vla -g % -o %:h/build/%:t:r && ./%:h/build/%:t:r<CR>
 
 " ============================================================================
 " AUTOCOMMANDS
