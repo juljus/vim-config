@@ -7,11 +7,6 @@
   "python.formatting.provider": "black",
   "python.formatting.blackArgs": ["--line-length=88"],
     
-  "clangd.arguments": [
-    "-header-insertion=never",
-    "--style={BasedOnStyle: LLVM, IndentWidth: 4}"
-  ],
-
   "diagnostic.floatingWindow": true,
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextPrefix": "▶ ",
