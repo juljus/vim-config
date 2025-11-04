@@ -1,5 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["python", "javascript", "typescript", "json", "yaml", "markdown"],
+  "coc.preferences.formatOnSaveFiletypes": ["python", "javascript", "typescript", "json", "yaml", "markdown", "c", "cpp"],
   
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": false,
