@@ -3,7 +3,7 @@
 
 ## About
 
-My Vim configuration.
+I now use NeoVim, so this is old and probably not the most polished, but I'll leave it here.
 
 
 
